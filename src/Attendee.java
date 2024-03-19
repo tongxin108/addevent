@@ -1,57 +1,55 @@
-public class Attendee
-{
+public class Attendee {
     private String name;
     private char gender;
     private String email;
     private int age;
-    public Attendee(String name, char gender, String email, int age)
-    {
-        this.name = name;
-        this.gender = gender;
-        this.email = email;
-        this.age = age;
+    private String seatNo;
+
+    public Attendee (String name,char gender, String email,int age,String seatNo){
+        this.name=name;
+        this.gender=gender;
+        this.email=email;
+        this.age=age;
+        this.seatNo=seatNo;
     }
-    public void setName(String name)
-    {
-        this.name = name;
+
+    public void setName(String name){
+        this.name=name;
     }
-    public String getName()
-    {
+    public String getName(){
         return name;
     }
-    public void setGender(char gender)
-    {
-        this.gender = gender;
+
+    public void setGender(char gender){
+        this.gender=gender;
     }
-    public char getGender()
-    {
+    public char getGender(){
         return gender;
     }
-    public void setEmail(String email)
-    {
-        this.email = email;
+
+    public void setEmail(String email){
+        this.email=email;
     }
-    public String getEmail()
-    {
+    public String getEmail(){
         return email;
     }
-    public void setAge(int age)
-    {
-        this.age = age;
+
+    public void setAge(int age){
+        this.age=age;
     }
-    public int getAge()
-    {
+    public int getAge(){
         return age;
     }
-    public String toString()
-    {
-        return "Attendee{Name'" + name + "'',Email  '" + email + "''}";
+
+    public void setSeatNo(String seatNo){
+        this.seatNo=seatNo;
+    }
+    public String getSeatNo(){
+        return seatNo;
     }
 
-
-
-
-
-
-
+    @Override
+    public String toString(){
+        return "Attendee:"+"\n"+"Name: "+name+"\n"+"Gender: "+gender+"\n"+"Age: "+age+"\n"+"Email: "+email+"\n"+"Seat NO.: "+seatNo+"\n";
+    }
 }
